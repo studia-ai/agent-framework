@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "studia-agent"
+version = "0.1.0"
+description = "A Studia-powered X/Twitter automation framework"
+authors = ["Studia AI <studiateam@proton.me>"]
+packages = [{include = "studia_agent", from = "src"}]
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+crewai = {extras = ["tools"], version = "^0.98.0"}
+tweepy = "^4.14.0"
+python-dotenv = "^1.0.0"
+duckduckgo-search = "^7.2.1"
+tavily-python = "^0.5.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
